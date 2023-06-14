@@ -15,7 +15,7 @@ pipeline {
             }
             steps {
                 echo "Terraform option selected"
-                terraform init
+                sh "terraform init"
             }
         }
     }
