@@ -14,7 +14,8 @@ pipeline {
                 expression { params.Resources == "Terraform" }
             }
             steps {
-                echo "Yoy have selected Lambda option"
+                echo "Terraform option selected"
+                terraform init
             }
         }
     }
