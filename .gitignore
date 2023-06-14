@@ -1,0 +1,2 @@
+#Ignora el archivo que contiene los secrets en texto plano
+.secrets
