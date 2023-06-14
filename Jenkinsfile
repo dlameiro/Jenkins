@@ -6,7 +6,7 @@ pipeline {
                 expression { params.Resources == "Lambda" }
             }
             steps {
-                echo "Hello Lambda World!"
+                echo "Yoy have selected Lambda option"
             }
         }
         stage('EC2-Option') {
@@ -14,7 +14,7 @@ pipeline {
                 expression { params.Resources == "EC2" }
             }
             steps {
-                echo "Hello EC2 World!"
+                echo "Yoy have selected EC2 option"
             }
         }
         stage('VPC-Option') {
@@ -22,7 +22,7 @@ pipeline {
                 expression { params.Resources == "VPC" }
             }
             steps {
-                echo "Hello VPC World!"
+                echo "Yoy have selected VPC option"
             }
         }
     }
