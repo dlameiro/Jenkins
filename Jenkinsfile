@@ -1,28 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('Lambda-Option') {
+        stage('HolaMundo') {
             when {
-                expression { params.Resources == "Lambda" }
+                expression { params.Resources == "Hola Mundo" }
+            }
+            steps {
+                echo "Hola Mundo!"
+            }
+        }
+        stage('Terraform') {
+            when {
+                expression { params.Resources == "Terraform" }
             }
             steps {
                 echo "Yoy have selected Lambda option"
-            }
-        }
-        stage('EC2-Option') {
-            when {
-                expression { params.Resources == "EC2" }
-            }
-            steps {
-                echo "Yoy have selected EC2 option"
-            }
-        }
-        stage('VPC-Option') {
-            when {
-                expression { params.Resources == "VPC" }
-            }
-            steps {
-                echo "Yoy have selected VPC option"
             }
         }
     }
