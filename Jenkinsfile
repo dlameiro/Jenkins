@@ -17,5 +17,13 @@ pipeline {
                 echo "Hello EC2 World!"
             }
         }
+        stage('VPC-Option') {
+            when {
+                expression { params.Resources == "VPC" }
+            }
+            steps {
+                echo "Hello VPC World!"
+            }
+        }
     }
 }
